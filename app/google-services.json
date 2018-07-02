@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "78820968414",
+    "firebase_url": "https://fir-17e60.firebaseio.com",
+    "project_id": "fir-17e60",
+    "storage_bucket": "fir-17e60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78820968414:android:37aa83c736174b39",
+        "android_client_info": {
+          "package_name": "com.dexterlab.sahil.demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78820968414-6rpo5mqrq1dn8b5h0q5uimuml79qclns.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "78820968414-6rpo5mqrq1dn8b5h0q5uimuml79qclns.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjEsGDNFgpevcn0n1DNITotgcH1MekxRE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

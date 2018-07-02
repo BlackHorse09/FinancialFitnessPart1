@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FinancialFitness</string>
+    
+    <array name="occupation">
+        <item>Self Employed</item>
+        <item>Student</item>
+        <item>Service</item>
+        <item>Other</item>
+    </array>
+    
+</resources>
