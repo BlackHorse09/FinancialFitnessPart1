@@ -34,6 +34,7 @@ public class GridViewLayout extends AppCompatActivity {
 
         ActionBar bar = getSupportActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#448AFF")));
+        bar.hide();
 
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);

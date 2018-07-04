@@ -56,9 +56,12 @@ public class CardAdapter extends BaseCardAdapter {
         imageView.setImageResource(model.getImage());
         progress = temp*(position+1);
         seekBar.setProgress(progress);
+        seekBar.setClickable(false);
+        seekBar.setFocusable(false);
+        seekBar.setEnabled(false);
 
         if (position == modelList.size()-1) {
-            textView.setText("Learn More>>>");
+            textView.setText("Learn More");
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

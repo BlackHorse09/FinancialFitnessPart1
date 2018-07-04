@@ -91,13 +91,5 @@ public class CardViewActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        finish();
-        overridePendingTransition( 0, 0);
-        Intent intent = new Intent(CardViewActivity.this,GridViewLayout.class);
-        startActivity(intent);
-        overridePendingTransition( 0, 0);
-    }
+
 }

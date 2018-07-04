@@ -17,18 +17,27 @@
         <activity android:name=".InfoSite" />
         <activity android:name=".ActivityOne" />
         <activity android:name=".Login">
-
-        </activity>
-        <activity android:name=".FinancialFitness" />
-        <activity android:name=".SocialWebActivity" />
-        <activity android:name=".GridViewLayout">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CardViewActivity"></activity>
+        <activity android:name=".FinancialFitness" />
+        <activity android:name=".SocialWebActivity" />
+        <activity android:name=".GridViewLayout">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".CardViewActivity" />
+        <activity android:name=".StartingActivity">
+
+        </activity>
     </application>
 
 </manifest>

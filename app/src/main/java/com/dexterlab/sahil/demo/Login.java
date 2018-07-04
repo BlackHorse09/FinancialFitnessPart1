@@ -1,7 +1,13 @@
 package com.dexterlab.sahil.demo;
 
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
@@ -21,6 +27,7 @@ public class Login extends AppCompatActivity {
 
     EditText email,password;
     Button login;
+    Context context;
     FirebaseAuth mAuth;
     ProgressBar progressBar;
     TextView goToRegister;
@@ -29,11 +36,21 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+//        int black = Color.parseColor("#000000");
+//
+//        Drawable mDrawable = context.getResources().getDrawable(R.drawable.ic_action_pass);
+//        mDrawable.setColorFilter(new
+//                PorterDuffColorFilter(black, PorterDuff.Mode.MULTIPLY));
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         email = (EditText) findViewById(R.id.editEmail);
         password = (EditText) findViewById(R.id.editPassword);
         login = (Button) findViewById(R.id.Login);
+
         goToRegister = (TextView) findViewById(R.id.goToRegister);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
         mAuth = FirebaseAuth.getInstance();
 
         login.setOnClickListener(new View.OnClickListener() {
@@ -71,24 +88,24 @@ public class Login extends AppCompatActivity {
         }
 
         if (pass.isEmpty() || pass.length() < 6) {
-            password.setError("Please enter password properly");
+            password.setError("Password must be 6 characters long");
             password.requestFocus();
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
+
 
         mAuth.signInWithEmailAndPassword(emailAdd, pass) .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
+
                 if (task.isSuccessful()){
                     Intent intent = new Intent(Login.this,GridViewLayout.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
                 }
                 else  {
-                    Toast.makeText(Login.this,task.getException().getMessage(),Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Login.this,"Please register Your login is not present",Toast.LENGTH_SHORT).show();
                 }
             }
         });
