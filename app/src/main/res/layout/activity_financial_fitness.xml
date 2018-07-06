@@ -4,74 +4,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context="com.dexterlab.sahil.demo.FinancialFitness">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editPhone"
-        android:layout_alignStart="@+id/editPhone"
-        android:layout_marginBottom="-76sp"
-        android:text="Mobile Number" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_above="@+id/editPhone"-->
+        <!--android:layout_alignStart="@+id/editPhone"-->
+        <!--android:layout_marginBottom="-76sp"-->
+        <!--android:text="Mobile Number" />-->
 
-    <EditText
-        android:id="@+id/editPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/editName"
-        android:layout_marginTop="76sp"
-        android:ems="10"
-        android:hint="Enter your phone number here"
-        android:inputType="phone" />
 
-    <EditText
-        android:id="@+id/editName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/textView6"
-        android:layout_marginTop="192sp"
-        android:ems="10"
-        android:hint="Enter your name here"
-        android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="220sp"
-        android:layout_height="25sp"
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView6"-->
+        <!--android:layout_width="220sp"-->
+        <!--android:layout_height="25sp"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginStart="52sp"-->
+        <!--android:layout_marginTop="158sp"-->
+        <!--android:hint="Enter your full name" />-->
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/textView7"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginBottom="225sp"-->
+        <!--android:layout_marginStart="59sp"-->
+        <!--android:text="Select Occupation" />-->
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="380sp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="52sp"
-        android:layout_marginTop="158sp"
-        android:hint="Enter your full name" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp"
+        android:background="@drawable/usergradient">
 
-    <Spinner
-        android:id="@+id/Occupation"
-        android:layout_width="220sp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/textView7"
-        android:layout_marginBottom="175sp"
-        android:entries="@array/occupation" />
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="33sp"
+            android:layout_marginTop="24sp"
+            android:ems="10"
+            android:hint="Enter Full Name"
+            android:inputType="textPersonName" />
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="225sp"
-        android:layout_marginStart="59sp"
-        android:text="Select Occupation" />
+        <EditText
+            android:id="@+id/editPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/editName"
+            android:layout_marginTop="101sp"
+            android:ems="10"
+            android:hint="Enter your phone number here"
+            android:inputType="phone" />
 
-    <Button
-        android:id="@+id/sendTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="94sp"
-        android:layout_marginStart="112sp"
-        android:text="Button" />
+
+        <Spinner
+            android:id="@+id/Occupation"
+            android:layout_width="220sp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editName"
+            android:layout_centerVertical="true"
+            android:entries="@array/occupation" />
+
+        <EditText
+            android:id="@+id/interest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/editName"
+            android:layout_marginBottom="102sp"
+            android:ems="10"
+            android:hint="Write about your interest"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/sendTo"
+            android:layout_width="130sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="22sp"
+            android:background="@drawable/buttonshape"
+            android:text="Submit Details" />
+
+
+    </RelativeLayout>
 </RelativeLayout>

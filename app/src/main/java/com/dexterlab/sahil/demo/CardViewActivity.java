@@ -37,52 +37,51 @@ public class CardViewActivity extends AppCompatActivity {
     private void getData() {
 
         if (number == 0) {
-            modelList.add(new Model(R.drawable.three));
+            modelList.add(new Model(R.drawable.c11));
+            modelList.add(new Model(R.drawable.c12));
             }
 
         else if (number == 1) {
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
+            modelList.add(new Model(R.drawable.c21));
+            modelList.add(new Model(R.drawable.card22));
+            modelList.add(new Model(R.drawable.c23));
+            modelList.add(new Model(R.drawable.c24));
+            modelList.add(new Model(R.drawable.c25));
 
 
         }
         else if (number == 2) {
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
+            modelList.add(new Model(R.drawable.c31));
+            modelList.add(new Model(R.drawable.c32));
+            modelList.add(new Model(R.drawable.c33));
+            modelList.add(new Model(R.drawable.c34));
+            modelList.add(new Model(R.drawable.c35));
 
         }
         else if (number == 3) {
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
+            modelList.add(new Model(R.drawable.c41));
+            modelList.add(new Model(R.drawable.c42));
+            modelList.add(new Model(R.drawable.c43));
+            modelList.add(new Model(R.drawable.c44));
 
         }
         else if (number == 4) {
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
+             modelList.add(new Model(R.drawable.c5));
+            modelList.add(new Model(R.drawable.c52));
         }
         else if (number == 5) {
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
+            modelList.add(new Model(R.drawable.c61));
+            modelList.add(new Model(R.drawable.c62));
+            modelList.add(new Model(R.drawable.c63));
+            modelList.add(new Model(R.drawable.c64));
 
         }
         else if (number == 6) {
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
-            modelList.add(new Model(R.drawable.three));
+            modelList.add(new Model(R.drawable.c71));
+            modelList.add(new Model(R.drawable.c72));
+            modelList.add(new Model(R.drawable.c73));
+            modelList.add(new Model(R.drawable.c74));
+
         }
 
 
