@@ -36,10 +36,10 @@ public class GridViewLayout extends AppCompatActivity {
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#448AFF")));
         bar.hide();
 
-        ActionBar actionBar = getSupportActionBar();
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.actionbar);
-        //Set Event
+//        ActionBar actionBar = getSupportActionBar();
+//        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+//        getSupportActionBar().setCustomView(R.layout.actionbar);
+//        //Set Event
         setSingleEvent(mainGrid);
         //setToggleEvent(mainGrid);
     }

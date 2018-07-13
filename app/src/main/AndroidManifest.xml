@@ -14,11 +14,8 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".Registration" />
         <activity android:name=".MasterGroup" />
-        <activity android:name=".InfoSite" />
-        <activity android:name=".ActivityOne" />
         <activity android:name=".Login"></activity>
         <activity android:name=".FinancialFitness" />
-        <activity android:name=".SocialWebActivity" />
         <activity android:name=".AnswerActivity" />
         <activity android:name=".QuestionListActivity" />
         <activity android:name=".SearchActivity" />
