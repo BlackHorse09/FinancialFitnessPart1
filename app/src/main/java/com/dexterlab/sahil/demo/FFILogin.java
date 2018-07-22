@@ -7,20 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 public class FFILogin extends AppCompatActivity {
 
     Button button;
     EditText username,password;
+    //ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ffilogin);
 
         ActionBar actionBar = getSupportActionBar();
-
         actionBar.hide();
+
+//        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+//        progressBar.setVisibility(View.INVISIBLE);
 
         username = (EditText) findViewById(R.id.editEmail);
         password = (EditText) findViewById(R.id.editPassword);
@@ -40,12 +44,13 @@ public class FFILogin extends AppCompatActivity {
         String pass = password.getText().toString();
 
         if (userName.isEmpty()){
-            username.setError("Please netr the username given");
+            username.setError("Please enter the username given");
             username.requestFocus();
             return;
         }
 
         if (userName.equals("ADMIN") && pass.equals("1234")) {
+      //      progressBar.setVisibility(View.VISIBLE);
             Toast.makeText(getApplicationContext(),"WELCOME",Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(FFILogin.this, StartActivity.class);
             startActivity(intent);

@@ -1,6 +1,7 @@
 package com.dexterlab.sahil.demo;
 
 import android.os.Bundle;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -12,6 +13,9 @@ public class AnswerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_answer);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         textAnswer = (TextView) findViewById(R.id.textAnswer);
         textQuestion = (TextView) findViewById(R.id.textQuestion);

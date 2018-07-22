@@ -130,6 +130,15 @@
             android:layout_marginTop="38sp"
             app:srcCompat="@drawable/flogof" />
 
+        <!--<ProgressBar-->
+            <!--android:id="@+id/progressBar3"-->
+            <!--style="?android:attr/progressBarStyle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="63dp" />-->
+
 
     </RelativeLayout>
 

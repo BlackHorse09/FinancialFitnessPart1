@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
     Button login;
     Context context;
     FirebaseAuth mAuth;
-    ProgressBar progressBar;
+    //ProgressBar progressBar;
     TextView goToRegister;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,10 @@ public class Login extends AppCompatActivity {
         login = (Button) findViewById(R.id.Login);
 
         goToRegister = (TextView) findViewById(R.id.goToRegister);
+
+//        progressBar = (ProgressBar) findViewById(R.id.progressBar3);
+//        progressBar.setVisibility(View.INVISIBLE);
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -98,7 +102,7 @@ public class Login extends AppCompatActivity {
         mAuth.signInWithEmailAndPassword(emailAdd, pass) .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-
+            //progressBar.setVisibility(View.VISIBLE);
                 if (task.isSuccessful()){
                     Intent intent = new Intent(Login.this,GridViewLayout.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);

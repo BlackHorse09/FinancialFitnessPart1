@@ -46,18 +46,20 @@ public class MainActivity extends AppCompatActivity {
         String question = postquestion.getText().toString();
         String answer = postanswer.getText().toString();
 
-        if (!TextUtils.isEmpty(question)) {
-            String id = databaseQuestion.push().getKey();
-            Question question1 = new Question(id,question,answer);
-            databaseQuestion.child(id).setValue(question1);
-            Toast.makeText(getApplicationContext(),"Successfully posted",Toast.LENGTH_SHORT).show();
+        if (question.length() <= 255) {
+            if (!TextUtils.isEmpty(question)) {
+                String id = databaseQuestion.push().getKey();
+                Question question1 = new Question(id, question, answer);
+                databaseQuestion.child(id).setValue(question1);
+                Toast.makeText(getApplicationContext(), "Successfully posted", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getApplicationContext(), "Please enter question to be posted", Toast.LENGTH_SHORT).show();
+            }
         }
+
         else {
-            Toast.makeText(getApplicationContext(),"Please enter question to be posted",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Word limit exceeded i.e 255 characters", Toast.LENGTH_SHORT).show();
         }
-
-
-
 
     }
 }

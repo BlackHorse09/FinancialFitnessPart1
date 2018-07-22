@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +29,7 @@ public class QuestionListActivity extends AppCompatActivity {
 
     DatabaseReference databaseQuestion;
     ListView listView;
+    ProgressBar progressBar;
     String questionOriginal;
     List<Question> listOfQuestion;
 
@@ -47,6 +49,9 @@ public class QuestionListActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.listView);
         databaseQuestion = FirebaseDatabase.getInstance().getReference().child("POST");
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.VISIBLE);
 
         listOfQuestion = new ArrayList<>();
 
@@ -85,10 +90,12 @@ public class QuestionListActivity extends AppCompatActivity {
 //        //
 
         databaseQuestion.addValueEventListener(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 listOfQuestion.clear();
                 for (DataSnapshot questionSnap : dataSnapshot.getChildren()) {
+                    progressBar.setVisibility(View.INVISIBLE);
                     Question question = questionSnap.getValue(Question.class);
                     listOfQuestion.add(question);
                 }
@@ -120,7 +127,12 @@ public class QuestionListActivity extends AppCompatActivity {
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Question question = listOfQuestion.get(i);
                 questionOriginal = question.getQuestion().toString();
-                showUpdateDialog(question.getId(),question.getAnswer());
+//                showUpdateDialog(question.getId(),question.getAnswer());
+//                return true;
+                Intent intent = new Intent(QuestionListActivity.this,NewAnswer.class);
+                intent.putExtra("question",question.getQuestion().toString());
+                intent.putExtra("id",question.getId().toString());
+                startActivity(intent);
                 return true;
             }
         });
